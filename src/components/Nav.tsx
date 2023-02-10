@@ -1,18 +1,8 @@
 import Image from "next/image";
-import { useState } from "react";
+
 import ProductDialog from "./ProductDialog";
 
 const Nav = () => {
-	const [showProductDiag, setshowProductDiag] = useState(false);
-
-	const handleMouseenter = (e) => {
-		setshowProductDiag(true);
-	};
-
-	const handleMouseleave = (e) => {
-		setshowProductDiag(false);
-	};
-
 	return (
 		<>
 			<div className='mt-10 flex justify-between items-center'>
@@ -22,32 +12,27 @@ const Nav = () => {
 				{/* Nav menus */}
 				<div>
 					<ul className='flex justify-between'>
-						<a href='#individuals'>
+						<a href='#individuals' className='flex items-center'>
 							<li className=' cursor-pointer hover:bg-slate-600 hover:text-white hover:rounded-md px-3 py-1 transition-all duration-900'>
 								Individuals
 							</li>
 						</a>
 
-						<a href='#teams'>
+						<a href='#teams' className='flex items-center'>
 							<li className=' cursor-pointer hover:bg-slate-600 hover:text-white hover:rounded-md px-3 py-1 transition-all duration-900'>
 								Teams
 							</li>
 						</a>
 
-						<a href='#Enterprise'>
+						<a href='#Enterprise' className='flex items-center'>
 							<li className=' cursor-pointer hover:bg-slate-600 hover:text-white hover:rounded-md px-3 py-1 transition-all duration-900'>
 								Enterprise
 							</li>
 						</a>
 
-						<a
-							href='#product'
-							className='flex items-center'
-							onMouseEnter={(e) => handleMouseenter(e)}
-							onMouseLeave={(e) => handleMouseleave(e)}
-						>
-							<li className=' cursor-pointer hover:bg-slate-600 hover:text-white hover:rounded-md pl-3 py-1 transition-all duration-900'>
-								Product
+						<a href='#product' className=' flex items-center'>
+							<li className='group cursor-pointer pl-3 py-1 transition-all duration-900'>
+								<ProductDialog />
 							</li>
 							<Image
 								src={"angledown.svg"}
@@ -58,13 +43,13 @@ const Nav = () => {
 							/>
 						</a>
 
-						<a href='#pricing'>
+						<a href='#pricing' className='flex items-center'>
 							<li className=' cursor-pointer hover:bg-slate-600 hover:text-white hover:rounded-md px-3 py-1 transition-all duration-900'>
 								Pricing
 							</li>
 						</a>
 
-						<a href='#resources'>
+						<a href='#resources' className='flex items-center'>
 							<li className=' cursor-pointer hover:bg-slate-600 hover:text-white hover:rounded-md px-3 py-1 transition-all duration-900'>
 								Resources
 							</li>
@@ -80,8 +65,6 @@ const Nav = () => {
 					</button>
 				</div>
 			</div>
-
-			{showProductDiag && <ProductDialog />}
 		</>
 	);
 };

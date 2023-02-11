@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import React, { Dispatch, SetStateAction } from "react";
 import ProductItem from "./ProductItem";
 
 const productData = [
@@ -44,13 +44,20 @@ const productData = [
 	},
 ];
 
-const ProductDialog = () => {
+interface props {
+	close: Dispatch<SetStateAction<boolean>>;
+}
+
+const ProductDialog = ({ close }: props) => {
 	return (
 		<div className=' cursor-auto'>
 			<h1 className=' cursor-pointer hover:bg-slate-600 hover:text-white hover:rounded-md px-3 py-1 transition-all duration-900'>
 				Products
 			</h1>
-			<div className='hidden absolute top-14 left-96 right-96 group-hover:grid  hover:block grid-cols-4 mt-5 mx-16 w-128  rounded-lg shadow-lg drop-shadow-lg bg-white'>
+			<div
+				onMouseLeave={() => close(false)}
+				className='hidden absolute top-14 left-96 right-96 group-hover:grid  hover:block grid-cols-4 mt-5 mx-16 w-128  rounded-lg shadow-lg drop-shadow-lg bg-white'
+			>
 				<div className=' col-span-1 p-5 bg-[#E7EDF6] rounded-l-lg'>
 					<h1 className='mb-5 text-3xl font-bold'>Product</h1>
 					<p className=' text-slate-600 text-lg'>

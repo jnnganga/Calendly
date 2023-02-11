@@ -1,11 +1,24 @@
 import Image from "next/image";
+import { useState } from "react";
 
 import ProductDialog from "./ProductDialog";
+import ResourcesDiag from "./ResourcesDiag";
 
 const Nav = () => {
+	const [openProduct, setOpenProduct] = useState(false);
+	const [openResource, setOpenResource] = useState(false);
+
+	const clearMenu = () => {
+		setOpenProduct(false);
+		setOpenResource(false);
+	};
+
 	return (
 		<>
-			<div className='mt-10 flex justify-between items-center'>
+			<div
+				onMouseEnter={() => clearMenu()}
+				className='mt-10 flex justify-between items-center'
+			>
 				{/* Nav logo */}
 				<Image src={"calendly.svg"} height={30} width={150} alt='Icon' />
 
@@ -30,12 +43,16 @@ const Nav = () => {
 							</li>
 						</a>
 
-						<a href='#product' className=' flex items-center'>
-							<li className='group cursor-pointer pl-3 py-1 transition-all duration-900'>
-								<ProductDialog />
+						<a
+							href='#product'
+							className=' flex items-center'
+							onMouseEnter={() => setOpenProduct(true)}
+						>
+							<li className='group cursor-pointer pl-3 py-1 transition-all duration-900 '>
+								<ProductDialog close={setOpenProduct} />
 							</li>
 							<Image
-								src={"angledown.svg"}
+								src={`${openProduct ? "angleup.svg" : "angledown.svg"}`}
 								height={10}
 								width={10}
 								alt='arrow down'
@@ -49,10 +66,21 @@ const Nav = () => {
 							</li>
 						</a>
 
-						<a href='#resources' className='flex items-center'>
-							<li className=' cursor-pointer hover:bg-slate-600 hover:text-white hover:rounded-md px-3 py-1 transition-all duration-900'>
-								Resources
+						<a
+							href='#resources'
+							className='flex items-center'
+							onMouseEnter={() => setOpenResource(true)}
+						>
+							<li className='group cursor-pointer pl-3 py-1 transition-all duration-900 '>
+								<ResourcesDiag close={setOpenResource} />
 							</li>
+							<Image
+								src={`${openResource ? "angleup.svg" : "angledown.svg"}`}
+								height={10}
+								width={10}
+								alt='arrow down'
+								className='mr-3 pl-0.5 translate-y-0.3'
+							/>
 						</a>
 					</ul>
 				</div>

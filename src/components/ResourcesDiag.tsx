@@ -41,13 +41,13 @@ const resourceItems = [
 
 const ResourcesDiag = ({ close }: props) => {
 	return (
-		<div className='z-20 cursor-auto'>
+		<div className=' cursor-auto'>
 			<h1 className=' cursor-pointer hover:bg-slate-600 hover:text-white hover:rounded-md px-3 py-1 transition-all duration-900'>
 				Resources
 			</h1>
 			<div
 				onMouseLeave={() => close(false)}
-				className='hidden absolute top-14 left-[28rem] right-[28rem] group-hover:grid  hover:block grid-cols-3 mt-5 mx-16 w-128  rounded-lg shadow-lg drop-shadow-lg bg-white'
+				className='hidden z-50  absolute top-14 left-[28rem] right-[28rem] group-hover:grid  hover:block grid-cols-3 mt-5 mx-16 w-128  rounded-lg shadow-lg drop-shadow-lg bg-white'
 			>
 				<div className=' col-span-1 p-5 bg-[#E7EDF6] rounded-l-lg'>
 					<h1 className='mb-5 text-3xl font-bold'>Resources</h1>

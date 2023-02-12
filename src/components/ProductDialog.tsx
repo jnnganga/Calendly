@@ -56,7 +56,7 @@ const ProductDialog = ({ close }: props) => {
 			</h1>
 			<div
 				onMouseLeave={() => close(false)}
-				className='hidden absolute top-14 left-96 right-96 group-hover:grid  hover:block grid-cols-4 mt-5 mx-16 w-128  rounded-lg shadow-lg drop-shadow-lg bg-white'
+				className='hidden z-50  absolute top-14 left-96 right-96 group-hover:grid  hover:block grid-cols-4 mt-5 mx-16 w-128  rounded-lg shadow-lg drop-shadow-lg bg-white'
 			>
 				<div className=' col-span-1 p-5 bg-[#E7EDF6] rounded-l-lg'>
 					<h1 className='mb-5 text-3xl font-bold'>Product</h1>

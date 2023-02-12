@@ -18,6 +18,7 @@ export default function Home() {
 				<Nav />
 				<HeroSection />
 			</main>
+			<div className=' bg-gray-100 h-44'></div>
 		</>
 	);
 }

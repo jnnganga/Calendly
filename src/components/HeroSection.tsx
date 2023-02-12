@@ -6,16 +6,16 @@ const HeroSection = () => {
 	const { data: session } = useSession();
 	console.log(session);
 	return (
-		<div className='grid grid-cols-2 gap-5 mt-20 mx-6 h-full '>
+		<div className='grid grid-cols-2 gap-5 mt-20 mx-6 pb-20 '>
 			<div className=' text-6xl font-bold space-y-5  '>
 				<h1 className='text-[#0B3558] '>Easy</h1>
 				<h1 className='text-[#0B3558] '>scheduling</h1>
 				<h1 className='text-blue-500'>ahead</h1>
-				<p className='my-20 font-thin text-xl w-[28rem] '>
+				<p className=' py-10 font-thin text-xl w-[28rem] '>
 					Calendly is your scheduling automation platform for eliminating the
 					back-and-forth emails for finding the perfect time — and so much more.
 				</p>
-				<div className='mt-20'>
+				<div className=''>
 					{session ? (
 						<button
 							onClick={() => signOut()}
@@ -60,16 +60,28 @@ const HeroSection = () => {
 						</div>
 					)}
 				</div>
+				<div className='inline-flex items-center justify-center w-full'>
+					<hr className='w-full h-px my-5 bg-gray-200 border-0 dark:bg-gray-700' />
+					<span className='absolute px-3 text-base font-light text-gray-900 -translate-x-1/3 bg-white left-1/3 dark:text-white dark:bg-gray-900'>
+						OR
+					</span>
+				</div>
+				<div className='text-sm '>
+					{" "}
+					<span className=' text-sm text-blue-400'>
+						Signup for free with email
+					</span>
+					<span>&nbsp; No credit card required</span>
+				</div>
 			</div>
-			<div className='z-0 flex justify-center items-center '>
-				<Image
-					src={"/hero_image.png"}
-					height={1132}
-					width={1366}
-					alt='person image'
-					className='-z-1 scale-110'
-				/>
-			</div>
+
+			<Image
+				src={"/hero_image.png"}
+				height={1132}
+				width={1366}
+				alt='person image'
+				className=' scale-110'
+			/>
 		</div>
 	);
 };

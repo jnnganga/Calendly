@@ -17,7 +17,7 @@ const Nav = () => {
 		<>
 			<div
 				onMouseEnter={() => clearMenu()}
-				className='mt-10 flex justify-between items-center'
+				className='mt-10 flex justify-between items-center z-20'
 			>
 				{/* Nav logo */}
 				<Image src={"calendly.svg"} height={30} width={150} alt='Icon' />

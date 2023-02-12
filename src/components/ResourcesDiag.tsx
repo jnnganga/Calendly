@@ -41,7 +41,7 @@ const resourceItems = [
 
 const ResourcesDiag = ({ close }: props) => {
 	return (
-		<div className=' cursor-auto'>
+		<div className='z-20 cursor-auto'>
 			<h1 className=' cursor-pointer hover:bg-slate-600 hover:text-white hover:rounded-md px-3 py-1 transition-all duration-900'>
 				Resources
 			</h1>

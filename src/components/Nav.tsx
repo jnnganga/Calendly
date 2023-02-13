@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import ProductDialog from "./ProductDialog";
 import ResourcesDiag from "./ResourcesDiag";
@@ -7,6 +7,23 @@ import ResourcesDiag from "./ResourcesDiag";
 const Nav = () => {
 	const [openProduct, setOpenProduct] = useState(false);
 	const [openResource, setOpenResource] = useState(false);
+	const [color, setColor] = useState("transparent");
+	const [nav, setNav] = useState(false);
+
+	const handleNav = () => setNav(!nav);
+
+	const changeColor = () => {
+		if (window.scrollY >= 20) {
+			setColor("#ffffff");
+		} else {
+			setColor("transparent");
+		}
+	};
+
+	useEffect(() => {
+		window.addEventListener("scroll", changeColor);
+		return () => window.removeEventListener("scroll", changeColor);
+	}, []);
 
 	const clearMenu = () => {
 		setOpenProduct(false);
@@ -14,10 +31,13 @@ const Nav = () => {
 	};
 
 	return (
-		<>
+		<div
+			style={{ backgroundColor: `${color}` }}
+			className='hidden md:block fixed items-center left-0 w-full top-0 z-10 ease-in duration-100 drop-shadow-lg  '
+		>
 			<div
 				onMouseEnter={() => clearMenu()}
-				className='mt-10 flex justify-between items-center z-20'
+				className=' max-w-[1240px] m-auto flex justify-between items-center py-2 my-5 '
 			>
 				{/* Nav logo */}
 				<Image src={"calendly.svg"} height={30} width={150} alt='Icon' />
@@ -93,7 +113,7 @@ const Nav = () => {
 					</button>
 				</div>
 			</div>
-		</>
+		</div>
 	);
 };
 

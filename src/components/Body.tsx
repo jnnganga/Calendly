@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import Tabsection from "./Tabsection";
-import { salesData, marketingData } from "@/utils/Section_data";
+import { salesData, marketingData, successData } from "@/utils/Section_data";
 
 const Body = () => {
 	const [isActive, setIsiActive] = useState(0);
@@ -335,6 +335,10 @@ const Body = () => {
 
 			<div style={{ display: `${isActive === 1 ? "block" : "none"}` }}>
 				<Tabsection data={marketingData} hero={"marketing_hero.svg"} />
+			</div>
+
+			<div style={{ display: `${isActive === 2 ? "block" : "none"}` }}>
+				<Tabsection data={successData} hero={"success_hero.png"} />
 			</div>
 		</div>
 	);

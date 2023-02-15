@@ -46,3 +46,24 @@ export const marketingData: Array<SectionObj> = [
 		info: "Reduce friction in the sales funnel and close more deals.",
 	},
 ];
+
+export const successData: Array<SectionObj> = [
+	{
+		id: 1,
+		icon: "drive.png",
+		title: "Drive more retention",
+		info: "Bring all of your experts together and connect with customers at every stage of their journey to build long-lasting partnerships.",
+	},
+	{
+		id: 2,
+		icon: "speed.png",
+		title: "Speed up your response times",
+		info: "Quickly book time to solve customers needs and help them self-serve to support their goals.",
+	},
+	{
+		id: 3,
+		icon: "improve.png",
+		title: "Improve NPS and customer health",
+		info: "Change the way you schedule meetings to increase customer satisfaction and keep engagement high with reminder and follow-up workflows.",
+	},
+];

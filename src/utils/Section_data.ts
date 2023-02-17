@@ -67,3 +67,45 @@ export const successData: Array<SectionObj> = [
 		info: "Change the way you schedule meetings to increase customer satisfaction and keep engagement high with reminder and follow-up workflows.",
 	},
 ];
+
+export const recruitingData: Array<SectionObj> = [
+	{
+		id: 1,
+		icon: "hire.png",
+		title: "Hire more efficiently",
+		info: "Spend less time wrangling calendars and more time meeting candidates.",
+	},
+	{
+		id: 2,
+		icon: "cycle.png",
+		title: "Speed up your recruiting cycle",
+		info: "Book interviews in seconds and reduce time-to-fill.",
+	},
+	{
+		id: 3,
+		icon: "experience.png",
+		title: "Improve the candidate experience",
+		info: "Eliminate friction and make your recruiting process a competitive advantage.",
+	},
+];
+
+export const technologyData: Array<SectionObj> = [
+	{
+		id: 1,
+		icon: "shield.png",
+		title: "Maintain enterprise-grade security with scheduling automation",
+		info: "Stay aligned with your security requirements and reduce risk across the org.",
+	},
+	{
+		id: 2,
+		icon: "ease.png",
+		title: "Implement and govern at ease",
+		info: "Eliminate the manual processes of implementing, managing user access and permissions on the platform.",
+	},
+	{
+		id: 3,
+		icon: "dollar.svg",
+		title: "Drive adoption and ROI across teams	",
+		info: "Partner with our team to onboard, drive adoption, and identify success metrics to achieve greater value, faster.",
+	},
+];

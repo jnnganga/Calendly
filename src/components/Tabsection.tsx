@@ -17,46 +17,46 @@ const Tabsection = ({ data, hero }: ParentProps) => {
 			<div className='grid grid-cols-2 gap-5 mt-16  pb-20 mx-24'>
 				<div className=' '>
 					<div className='col-span-1'>
-						<div className=' col-span-1 flex items-start gap-4 '>
-							<div>
+						<div className=' col-span-1 grid grid-cols-10 gap-2 '>
+							<div className='col-span-1'>
 								<Image
 									src={"/" + data[0].icon}
 									height={25}
 									width={25}
 									alt='sales hero'
-									className=' bg-teal-200'
 								/>
 							</div>
-							<div>
+							<div className='col-span-9'>
 								<h1 className='font-bold'>{data[0].title}</h1>
 								<p className=' text-lg font-light pr-10 mt-2'>{data[0].info}</p>
 							</div>
 						</div>
 
-						<div className=' col-span-1 flex items-start gap-4 mt-8 '>
-							<Image
-								src={"/" + data[1].icon}
-								height={25}
-								width={25}
-								alt='sales hero'
-								className=' bg-stone-200'
-							/>
-							<div>
+						<div className=' col-span-1 grid grid-cols-10 gap-2  mt-8 '>
+							<div className='col-span-1'>
+								<Image
+									src={"/" + data[1].icon}
+									height={25}
+									width={25}
+									alt='sales hero'
+								/>
+							</div>
+							<div className='col-span-9'>
 								<h1 className='font-bold'>{data[1].title}</h1>
 								<p className=' text-lg font-light pr-10 mt-2'>{data[1].info}</p>
 							</div>
 						</div>
 
-						<div className=' col-span-1 flex items-start gap-4 mt-8 '>
-							<Image
-								src={"/" + data[2].icon}
-								height={25}
-								width={25}
-								alt='sales hero'
-								className=' bg-amber-200'
-							/>
-
-							<div>
+						<div className=' col-span-1 grid grid-cols-10 gap-2  mt-8 '>
+							<div className='col-span-1'>
+								<Image
+									src={"/" + data[2].icon}
+									height={25}
+									width={25}
+									alt='sales hero'
+								/>
+							</div>
+							<div className='col-span-9'>
 								<h1 className='font-bold'>{data[2].title}</h1>
 								<p className=' text-lg font-light pr-10 mt-2'>{data[2].info}</p>
 								<button className='text-blue-500 mt-10 hover:text-blue-600'>
